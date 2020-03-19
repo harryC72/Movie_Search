@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "left"
   },
   media: {
-    height: 140
+    height: 600
   }
 }));
 
