@@ -9,7 +9,6 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import searchTheMovieDb from "../../services/searchTheMovieDb";
 import searchWiki from "../../services/searchWiki";
-import Spinner from "../Spinner/Spinner";
 import Collapse from "@material-ui/core/Collapse";
 import Link from "@material-ui/core/Link";
 
@@ -24,7 +23,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function MediaCard(props) {
-  console.log("PROPS", props);
   const classes = useStyles();
   const [expanded, setExpanded] = useState(false);
   const [description, setDescription] = useState("");
