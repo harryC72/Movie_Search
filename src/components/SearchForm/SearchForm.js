@@ -33,7 +33,7 @@ export default function BasicTextFields() {
   const [searchValue, setSearchValue] = useState("");
   const [showSpinner, setShowSpinner] = useState(false);
   const [searchResult, setSearchResult] = useState();
-  const [error, setError] = useState("");
+  const [searchError, setSearchError] = useState("");
   const [validationError, setValidationError] = useState();
 
   const classes = useStyles();
@@ -41,7 +41,7 @@ export default function BasicTextFields() {
   function sortMovieResult(result, searchValue) {
     let returnResult = result;
     if (!returnResult) {
-      setError("No result from IMDB");
+      setSearchError("No result from IMDB");
       setShowSpinner(false);
       return;
     }
@@ -88,7 +88,7 @@ export default function BasicTextFields() {
               year={item.y}
               starring={item.s}
               wikiSearch={item.l}
-              describeError={setError}
+              describeError={setSearchError}
               setProgress={setProgress}
             />
           );
@@ -98,7 +98,7 @@ export default function BasicTextFields() {
   }
 
   function takeAwayError() {
-    setError("");
+    setSearchError("");
   }
 
   function setProgress(value) {
@@ -107,8 +107,8 @@ export default function BasicTextFields() {
 
   const spinner = showSpinner ? <Spinner /> : null;
 
-  const errorToast = error.length ? (
-    <ErrorToast message={error} clickEvent={takeAwayError} />
+  const errorToast = searchError.length ? (
+    <ErrorToast message={searchError} clickEvent={takeAwayError} />
   ) : null;
 
   function inputDelivered(input) {
