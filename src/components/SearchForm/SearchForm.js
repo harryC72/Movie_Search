@@ -59,6 +59,9 @@ export default function BasicTextFields() {
 
   async function searchMovie(searchValue, callback) {
     searchValue = validateSearchValue(searchValue);
+    if (!searchValue) {
+      return;
+    }
     setShowSpinner(true);
     let result = await callback(searchValue);
 
@@ -109,9 +112,11 @@ export default function BasicTextFields() {
   ) : null;
 
   function inputDelivered(input) {
-    if (input) {
-      setValidationError();
+    if (!input) {
+      setValidationError("No title entered");
+      return;
     }
+    setValidationError("");
     setSearchValue(input);
   }
 
