@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.MuiBox-root-8 {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.makeStyles-root-1 {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+}
+
+.MuiBox-root-7 {
+  align-items: center;
+}

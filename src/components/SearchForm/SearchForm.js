@@ -25,7 +25,9 @@ const useStyles = makeStyles({
   title: {
     textAlign: "center",
     textTransform: "uppercase",
-    padding: "0 5px 0 5px"
+    padding: "0 5px 0 5px",
+    fontFamily: "Roboto Slab",
+    fontSize: "22px"
   }
 });
 
