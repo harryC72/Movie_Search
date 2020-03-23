@@ -117,11 +117,12 @@ export default function MediaCard(props) {
     <div style={{ padding: "20px" }}>
       <Card className={classes.root}>
         <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image={props.image}
-            title={props.title}
-          />
+          <CardMedia className={classes.media} title={props.title}>
+            <img
+              src={props.image}
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               Title: {props.title}
